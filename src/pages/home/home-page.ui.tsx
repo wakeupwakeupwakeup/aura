@@ -139,7 +139,7 @@ function HomePage() {
                             <span>1</span>
                         </div>
                         <div className={"flex items-start gap-6"}>
-                            <img src={"src/shared/ui/icons/check.svg"} />
+                            <img src={"/src/shared/ui/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
