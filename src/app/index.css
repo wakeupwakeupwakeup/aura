@@ -11,7 +11,9 @@
 
 @layer base {
   header, main, footer {
+    @apply px-6;
     margin: 0 auto;
+    min-width: 425px;
     max-width: 1420px;
   }
 
@@ -20,15 +22,15 @@
   }
 
   html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE и Edge */
     scrollbar-width: none;  /* Firefox */
   }
 
   body {
-    @apply py-12;
+    @apply text-[14px] md:text-[18px] py-6 md:py-12;
     overflow-x: hidden;
-    font-size: 18px;
     color: #E5E5E5;
     background-color: #000;
     font-family: 'JetBrains Mono', sans-serif;
@@ -126,14 +128,13 @@
 
 @layer components {
   h1 {
+    @apply text-[7rem] leading-[7rem] md:text-[12rem] md:leading-[12rem];
     font-family: 'Architectural', sans-serif;
-    font-size: 12rem;
-    line-height: 12rem;
     text-align: right;
   }
 
   h2 {
-    @apply text-[12rem] leading-[11rem];
+    @apply text-center text-[10rem] md:text-[12rem] md:leading-[11rem];
     font-family: 'Architectural', sans-serif;
     background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
     -webkit-background-clip: text;
@@ -141,7 +142,7 @@
   }
 
   h3 {
-    @apply text-2xl font-medium;
+    @apply text-xl md:text-2xl font-medium;
   }
 
   header a {
@@ -152,6 +153,13 @@
 @layer utilities {
   .logo {
     font-family: 'Architectural', sans-serif;
+  }
+
+  .architectural {
+    font-family: 'Architectural', sans-serif;
+    background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .gradient, .logo, h3 {

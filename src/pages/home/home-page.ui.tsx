@@ -71,7 +71,7 @@ function DollarCenter() {
         speed: 10,
     })
     return (
-        <img ref={ref} className={"absolute bottom-[13%] left-[10%] z-10"}
+        <img ref={ref} className={"absolute bottom-[10%] -left-[8%] md:bottom-[13%] md:left-[10%] z-10"}
              src={"/images/dollars-center.png"}/>
     )
 }
@@ -103,27 +103,31 @@ function HomePage() {
             <header className={"flex justify-between"}>
                 <div className={"flex gap-24 items-center"}>
                 <span className={"uppercase logo text-5xl"}>Aura</span>
-                <nav className={"flex gap-8"}>
+                <nav className={"hidden md:flex gap-8"}>
                     {navigation.map((item) => (
                         <a href={item.link}>{item.title}</a>
                     ))}
                 </nav>
-            </div>
-            <div className={"flex gap-6 items-center"}>
-                <a>Feedback</a>
-                <a>Консультация</a>
-            </div>
-        </header>
+                </div>
+                <div className={"inline-block md:hidden"}>
+                    <img src={"/icons/menu.svg"} />
+                </div>
+                <div className={"hidden md:flex gap-6 items-center"}>
+                    <a>Feedback</a>
+                    <a>Консультация</a>
+                </div>
+            </header>
         <main>
             <section className={"justify-center mt-24 relative"}>
                 <div className={"flex flex-col gap-20 max-w-[660px] z-10 relative"}>
-                    <h1 className={"flex flex-col gap-1"}>
-                        <span className={"gradient text-[17rem]"}>Aura <br/> Marketing</span>
+                    <h1 className={"flex flex-col"}>
+                        <span className={"gradient text-[10rem] leading-[10rem] md:text-[17rem]"}>Aura <br/> Marketing</span>
                         <span className={"gradient"}>Agency</span>
                     </h1>
                     <Slide triggerOnce={true} direction={"up"}>
-                        <p>We provide innovative marketing solutions for your business</p>
+                        <p className={"text-center"}>We provide innovative marketing solutions for your business</p>
                     </Slide>
+                    <span className={"text-7xl architectural absolute top-[10%] left-[10%]"}>Welcome</span>
                     <DollarCenter />
                 </div>
                 <Fade className={"flex justify-center"} triggerOnce={true} delay={300}>
@@ -133,55 +137,55 @@ function HomePage() {
                 <DollarBottomRight />
             </section>
             <section className={"mt-72"}>
-                <div className="grid grid-cols-3 grid-rows-3">
-                    <div className={"flex items-center relative"}>
-                        <div className={"absolute -right-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
+                <div className="grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-3">
+                    <div className={"flex flex-row-reverse items-center relative"}>
+                        <div className={"md:absolute -right-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
                             <span>1</span>
                         </div>
                         <div className={"flex items-start gap-6"}>
-                            <img src={"/icons/check.svg"} />
+                            <img className={"hidden md:inline-block"} src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
                     </div>
-                    <div className="flex items-center relative col-start-3 text-right">
-                        <div className={"absolute -left-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
+                    <div className="flex items-center relative md:col-start-3 text-right">
+                        <div className={"md:absolute -left-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
                             <span>2</span>
                         </div>
                         <div className={"flex flex-row-reverse items-start gap-6"}>
-                            <img src={"/icons/check.svg"} />
+                            <img className={"hidden md:inline-block"} src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
                     </div>
-                    <div className="flex items-center relative col-start-1 row-start-3">
-                        <div className={"absolute -right-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
+                    <div className="flex flex-row-reverse items-center relative md:col-start-1 md:row-start-3">
+                        <div className={"md:absolute -right-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
                             <span>3</span>
                         </div>
                         <div className={"flex items-start gap-6"}>
-                            <img src={"/icons/check.svg"} />
+                            <img className={"hidden md:inline-block"} src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
                     </div>
-                    <div className="flex items-center relative col-start-3 row-start-3 text-right">
-                        <div className={"absolute -left-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
+                    <div className="flex items-center relative md:col-start-3 md:row-start-3 text-right">
+                        <div className={"md:absolute -left-[10%] -top-[20%] inline-block rounded-full bg-yellow-200 text-black w-[3em] h-[3em] leading-[3em] text-center"}>
                             <span>4</span>
                         </div>
                         <div className={"flex flex-row-reverse items-start gap-6"}>
-                            <img src={"/icons/check.svg"} />
+                            <img className={"hidden md:inline-block"} src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center col-start-2 row-start-2">
-                        <h2>About us</h2>
+                    <div className="flex justify-center items-center row-start-3 md:col-start-2 md:row-start-2">
+                        <h2 className={"text-8xl"}>A little bit <br/> about us</h2>
                     </div>
                 </div>
             </section>
             <section className={"flex-col items-center gap-24"}>
                 <h2 className={"uppercase"}>Partners</h2>
-                <div className={"flex w-full justify-between"}>
+                <div className={"grid grid-cols-3 md:grid-flow-col md:grid-rows-1 w-full justify-between"}>
                     <Fade cascade={true} damping={0.3} triggerOnce={true}>
                         {
                             partners.map((item) => (
@@ -195,19 +199,20 @@ function HomePage() {
               </div>
           </section>
           <section>
-              <div className={"grid grid-cols-12 grid-rows-2 gap-5 w-full h-[592px]"}>
-                  <div className="flex flex-col gap-3.5 relative col-span-5 dashed ">
+              <div className={"grid grid-cols-1 grid-rows-6 md:grid-cols-12 md:grid-rows-2 gap-5 w-full md:h-[592px]"}>
+                  <div className="flex flex-col gap-3.5 relative row-span-1 md:col-span-5 dashed min-h-[240px] ">
                       <div className={"relative w-full h-full overflow-hidden"}>
-                          <div className={"flex flex-col gap-3.5 p-5"}>
-                              <h3>Social media advertising</h3>
-                              <p className={"w-2/3"}>Создание и управление рекламными кампаниями в популярных социальных
-                                  сетях.
+                          <div className={"flex flex-col gap-3.5 p-5 w-2/3"}>
+                              <h3>Advertising
+                                  on social networks</h3>
+                              <p className={"md:w-2/3"}>
+                                  Create and manage advertising campaigns on popular social networks.
                               </p>
 
                           </div>
-                          <img className={"absolute -bottom-[10%] right-[30%]"}
+                          <img className={"absolute -bottom-[10%] right-[20%]"}
                                src={"/images/shape-1.png"}/>
-                          <img className={"absolute bottom-[10%] -right-[8%]"}
+                          <img className={"absolute bottom-[10%] -right-[15%]"}
                                src={"/images/shape-2.png"}/>
                       </div>
                       <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
@@ -215,15 +220,16 @@ function HomePage() {
                       <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
                       <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
-                  <div className="relative col-span-4 row-span-2 col-start-9 row-start-1 dashed">
+                  <div className="relative order-4 row-span-2 md:col-span-4 md:row-span-2 md:col-start-9 md:row-start-1 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
                           <div className={"flex flex-col gap-3.5 p-5"}>
-                              <h3>Social media advertising</h3>
-                              <p className={"w-2/3"}>Создание и управление рекламными кампаниями в популярных социальных
-                                  сетях.
+                              <h3>Examples of campaigns</h3>
+                              <p className={"md:w-2/3"}>
+                                  A case study of successful projects with a description of the tasks
+                                  set and the results achieved.
                               </p>
                           </div>
-                          <img className={"absolute -bottom-[10%] -right-[20%]"}
+                          <img className={"absolute -right-[20%] md:-bottom-[10%] md:-right-[20%] scale-125 md:scale-100"}
                                src={"/images/phone.png"}/>
                       </div>
                       <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
@@ -231,18 +237,17 @@ function HomePage() {
                       <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
                       <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
-                  <div className="flex flex-col gap-3.5 relative col-span-8 col-start-1 row-start-2 dashed">
+                  <div className="flex flex-col row-span-2 gap-3.5 relative md:col-span-8 md:col-start-1 md:row-start-2 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
                           <div className={"flex flex-col gap-3.5 p-5"}>
-                              <h3>Social media advertising</h3>
-                              <p className={"w-2/3"}>Создание и управление рекламными кампаниями в популярных социальных
-                                  сетях.
+                              <h3>Strategic planning</h3>
+                              <p className={"w-2/3"}>
+                                  Development of marketing strategies based on the goals and needs of the client.
                               </p>
-
                           </div>
-                          <img className={"absolute -top-[20%] right-[0%] z-10"}
+                          <img className={"absolute -bottom-[0%] -right-[20%] md:-top-[20%] md:right-[0%] z-10"}
                                src={"/images/shape-4.png"}/>
-                          <img className={"absolute -bottom-[35%] right-[10%]"}
+                          <img className={"absolute -bottom-[5%] -right-[0%] md:-bottom-[35%] md:right-[10%]"}
                                src={"/images/shape-5.png"}/>
                       </div>
                       <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
@@ -250,12 +255,12 @@ function HomePage() {
                       <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
                       <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
-                  <div className="flex flex-col gap-3.5 relative col-span-3 col-start-6 row-start-1 dashed">
+                  <div className="flex flex-col row-span-1 gap-3.5 relative md:row-span-1 md:col-span-3 md:col-start-6 md:row-start-1 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
                           <div className={"flex flex-col gap-3.5 p-5"}>
-                              <h3>Social media advertiasing</h3>
-                              <p>Создание и управление рекламными кампаниями в популярных социальных
-                                  сетях.
+                              <h3>Content Marketing</h3>
+                              <p>
+                                  Developing high-quality content to attract an audience and strengthen the brand
                               </p>
 
                           </div>
