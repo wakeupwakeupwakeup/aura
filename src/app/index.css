@@ -134,7 +134,7 @@
   }
 
   h2 {
-    @apply text-center text-[10rem] md:text-[12rem] md:leading-[11rem];
+    @apply text-center leading-[9rem] text-[10rem] md:text-[12rem] md:leading-[11rem];
     font-family: 'Architectural', sans-serif;
     background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
     -webkit-background-clip: text;
@@ -160,6 +160,19 @@
     background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .about-text {
+    color: #777777
+  }
+
+  .partner-card {
+    @apply rounded-bl-3xl rounded-tr-3xl;
+    background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+  }
+
+  .about-highlight {
+    color: #B6B6B6
   }
 
   .gradient, .logo, h3 {
