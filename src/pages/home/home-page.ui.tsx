@@ -97,17 +97,6 @@ function DollarBottomRight() {
     )
 }
 
-function StarsLeft() {
-    const { ref } = useParallax<HTMLImageElement>({
-        speed: 20,
-    })
-    return (
-        <img ref={ref} className={"absolute -bottom-[00%] -right-[0%] z-10"}
-             src={"/images/stars-1.png"}/>
-    )
-}
-
-
 function HomePage() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
     return (
@@ -117,7 +106,7 @@ function HomePage() {
                 <span className={"uppercase logo text-5xl"}>Aura</span>
                 <nav className={"hidden md:flex gap-8"}>
                     {navigation.map((item) => (
-                        <a href={item.link}>{item.title}</a>
+                        <a href={item.link} key={item.title}>{item.title}</a>
                     ))}
                 </nav>
                 </div>
@@ -134,7 +123,7 @@ function HomePage() {
                             <div className={"flex flex-col  text-3xl  gap-4"}>
                                 {
                                     navigation.map((item) => (
-                                        <a href={item.link} onClick={() => setMenuOpen(false)}>{item.title}</a>
+                                        <a href={item.link} onClick={() => setMenuOpen(false)} key={item.title}>{item.title}</a>
                                     ))
                                 }
                             </div>
@@ -209,22 +198,25 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="flex justify-center items-center row-start-3 md:col-start-2 md:row-start-2">
-                            <h2 className={"text-8xl"}>A little bit <br/> about us</h2>
+                            <Fade triggerOnce={true}>
+                                <h2 className={"text-8xl"}>A little bit <br/> about us</h2>
+                            </Fade>
                         </div>
                     </div>
                 </section>
                 <section className={"flex-col items-center gap-4 md:gap-24"}>
-                    <h2 className={"uppercase"}>Partners</h2>
+                    <Fade triggerOnce={true}>
+                        <h2 className={"uppercase"}>Partners</h2>
+                    </Fade>
                     <div className={"grid grid-cols-3 gap-y-10 gap-x-2 md:gap-2.5 md:grid-cols-6 md:grid-rows-1 w-full"}>
-                        <Fade cascade={true} damping={0.3} triggerOnce={true}>
+                        <Fade cascade={true} damping={0.1} triggerOnce={true}>
                             {
                                 partners.map((item) => (
-                                    <div className={"flex flex-col gap-2.5 items-center relative"}>
+                                    <div className={"flex flex-col gap-2.5 items-center relative"} key={item.name}>
                                         <div className={"relative h-[120px] md:h-[220px] w-full"}>
                                             <div className={"absolute bottom-0 partner-card h-[120px] md:h-[220px] w-full"}></div>
                                             <img className={"absolute -bottom-[15px] scale-90"} src={item.img}/>
                                         </div>
-
                                         <span>{item.name}</span>
                                     </div>
                                 ))
@@ -314,7 +306,9 @@ function HomePage() {
               </section>
                 <section id={"contact"}>
                     <div className={"flex flex-col gap-12"}>
-                        <h2>Contacts</h2>
+                        <Fade triggerOnce={true}>
+                            <h2 className={"text-left"}>Contacts</h2>
+                        </Fade>
                         <div className={"flex gap-6"}>
                             {
                                 contacts.map((item) => (
