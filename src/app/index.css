@@ -54,14 +54,14 @@
 
   @font-face {
     font-family: 'Architectural';
-    src: url("src/shared/ui/fonts/Architectural.ttf") format("truetype");
+    src: url("/public/fonts/Architectural.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-ExtraBold.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-ExtraBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -69,7 +69,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-Bold.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -77,7 +77,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-Light.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -85,7 +85,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-ExtraLight.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -93,7 +93,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-SemiBold.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -101,7 +101,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-Regular.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -109,7 +109,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-Thin.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -117,7 +117,7 @@
 
   @font-face {
     font-family: 'JetBrains Mono';
-    src: url('src/shared/ui/fonts/jetbrains/JetBrainsMono-Medium.ttf') format('truetype');
+    src: url('/public/fonts/jetbrains/JetBrainsMono-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;

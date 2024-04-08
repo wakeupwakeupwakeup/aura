@@ -24,43 +24,43 @@ const navigation: Navigation = [
 const partners: Partners = [
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
     {
         name: "Jane Cooper",
-        img: "src/shared/ui/images/male.png"
+        img: "/images/male.png"
     },
 ]
 
 const contacts: Contacts = [
     {
-        icon: "src/shared/ui/icons/mail.svg",
+        icon: "/icons/mail.svg",
         name: "example@gmail.com",
         link: "",
     },
     {
-        icon: "src/shared/ui/icons/skype.svg",
+        icon: "/icons/skype.svg",
         name: "Skype",
         link: "",
     },
     {
-        icon: "src/shared/ui/icons/telegram.svg",
+        icon: "/icons/telegram.svg",
         name: "mwoodo1",
         link: "",
     },
@@ -72,7 +72,7 @@ function DollarCenter() {
     })
     return (
         <img ref={ref} className={"absolute bottom-[13%] left-[10%] z-10"}
-             src={"src/shared/ui/images/dollars-center.png"}/>
+             src={"/images/dollars-center.png"}/>
     )
 }
 
@@ -82,7 +82,7 @@ function DollarBottomLeft() {
     })
     return (
         <img ref={ref} className={"absolute -bottom-[80%] -left-[40%] -z-10"}
-             src={"src/shared/ui/images/dollars-bottom-left.png"}/>
+             src={"/images/dollars-bottom-left.png"}/>
     )
 }
 
@@ -92,7 +92,7 @@ function DollarBottomRight() {
     })
     return (
         <img ref={ref} className={"absolute -bottom-[50%] -right-[40%] -z-10"}
-             src={"src/shared/ui/images/dollars-bottom-right.png"}/>
+             src={"/images/dollars-bottom-right.png"}/>
     )
 }
 
@@ -127,7 +127,7 @@ function HomePage() {
                     <DollarCenter />
                 </div>
                 <Fade className={"flex justify-center"} triggerOnce={true} delay={300}>
-                    <img className={"absolute top-0 left-0 z-0"} src={"src/shared/ui/images/stars.png"}/>
+                    <img className={"absolute top-0 left-0 z-0"} src={"/images/stars.png"}/>
                 </Fade>
                 <DollarBottomLeft />
                 <DollarBottomRight />
@@ -139,7 +139,7 @@ function HomePage() {
                             <span>1</span>
                         </div>
                         <div className={"flex items-start gap-6"}>
-                            <img src={"~shared/ui/icons/check.svg"} />
+                            <img src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
@@ -149,7 +149,7 @@ function HomePage() {
                             <span>2</span>
                         </div>
                         <div className={"flex flex-row-reverse items-start gap-6"}>
-                            <img src={"src/shared/ui/icons/check.svg"} />
+                            <img src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
@@ -159,7 +159,7 @@ function HomePage() {
                             <span>3</span>
                         </div>
                         <div className={"flex items-start gap-6"}>
-                            <img src={"src/shared/ui/icons/check.svg"} />
+                            <img src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
@@ -169,7 +169,7 @@ function HomePage() {
                             <span>4</span>
                         </div>
                         <div className={"flex flex-row-reverse items-start gap-6"}>
-                            <img src={"src/shared/ui/icons/check.svg"} />
+                            <img src={"/icons/check.svg"} />
                             <p>Наша команда состоит из экспертов по маркетингу с богатым опытом работы в различных
                                 отраслях.</p>
                         </div>
@@ -206,14 +206,14 @@ function HomePage() {
 
                           </div>
                           <img className={"absolute -bottom-[10%] right-[30%]"}
-                               src={"src/shared/ui/images/shape-1.png"}/>
+                               src={"/images/shape-1.png"}/>
                           <img className={"absolute bottom-[10%] -right-[8%]"}
-                               src={"src/shared/ui/images/shape-2.png"}/>
+                               src={"/images/shape-2.png"}/>
                       </div>
-                      <img className={"absolute -left-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -left-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
                   <div className="relative col-span-4 row-span-2 col-start-9 row-start-1 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
@@ -224,12 +224,12 @@ function HomePage() {
                               </p>
                           </div>
                           <img className={"absolute -bottom-[10%] -right-[20%]"}
-                               src={"src/shared/ui/images/phone.png"}/>
+                               src={"/images/phone.png"}/>
                       </div>
-                      <img className={"absolute -left-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -left-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
                   <div className="flex flex-col gap-3.5 relative col-span-8 col-start-1 row-start-2 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
@@ -241,14 +241,14 @@ function HomePage() {
 
                           </div>
                           <img className={"absolute -top-[20%] right-[0%] z-10"}
-                               src={"src/shared/ui/images/shape-4.png"}/>
+                               src={"/images/shape-4.png"}/>
                           <img className={"absolute -bottom-[35%] right-[10%]"}
-                               src={"src/shared/ui/images/shape-5.png"}/>
+                               src={"/images/shape-5.png"}/>
                       </div>
-                      <img className={"absolute -left-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -left-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
                   <div className="flex flex-col gap-3.5 relative col-span-3 col-start-6 row-start-1 dashed">
                       <div className={"relative w-full h-full overflow-hidden"}>
@@ -260,12 +260,12 @@ function HomePage() {
 
                           </div>
                           <img className={"absolute -bottom-[40%] -right-[45%]"}
-                               src={"src/shared/ui/images/shape-3.png"}/>
+                               src={"/images/shape-3.png"}/>
                       </div>
-                      <img className={"absolute -left-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -top-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -left-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
-                      <img className={"absolute -right-1 -bottom-1"} src={"src/shared/ui/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -top-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -left-1 -bottom-1"} src={"/icons/corner.svg"}/>
+                      <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                   </div>
               </div>
           </section>
