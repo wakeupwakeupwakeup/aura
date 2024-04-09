@@ -13,7 +13,6 @@
   header, main, footer {
     @apply px-6;
     margin: 0 auto;
-    min-width: 425px;
     max-width: 1420px;
   }
 

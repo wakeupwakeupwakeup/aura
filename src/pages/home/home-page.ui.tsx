@@ -136,7 +136,7 @@ function HomePage() {
                 </div>
             </header>
             <main>
-                <section className={"justify-center mt-24 relative"}>
+                <section className={"justify-center mt-24 relative scale-75 md:scale-100"}>
                     <div className={"flex flex-col gap-20 max-w-[660px] z-10 relative"}>
                         <h1 className={"flex flex-col"}>
                             <span
@@ -206,7 +206,7 @@ function HomePage() {
                 </section>
                 <section className={"flex-col items-center gap-4 md:gap-24"}>
                     <Fade triggerOnce={true}>
-                        <h2 className={"uppercase"}>Partners</h2>
+                        <h2 className={"uppercase scale-75 md:scale-100"}>Partners</h2>
                     </Fade>
                     <div className={"grid grid-cols-3 gap-y-10 gap-x-2 md:gap-2.5 md:grid-cols-6 md:grid-rows-1 w-full"}>
                         <Fade cascade={true} damping={0.1} triggerOnce={true}>
@@ -305,11 +305,11 @@ function HomePage() {
                   </div>
               </section>
                 <section id={"contact"}>
-                    <div className={"flex flex-col gap-12"}>
+                    <div className={"flex flex-col items-center gap-12 text-left"}>
                         <Fade triggerOnce={true}>
-                            <h2 className={"text-left"}>Contacts</h2>
+                            <h2 className={"text-left scale-75 md:scale-100"}>Contacts</h2>
                         </Fade>
-                        <div className={"flex gap-6"}>
+                        <div className={"flex flex-col items-center md:flex-row gap-6"}>
                             {
                                 contacts.map((item) => (
                                     <div className={"flex gap-2.5"}>
