@@ -24,28 +24,34 @@ const navigation: Navigation = [
 
 const partners: Partners = [
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "mellstry",
+        img: "/images/mellstroy.png",
+        link: "https://kick.com/melstroy"
     },
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "xqc",
+        img: "/images/xqc.png",
+        link: "https://kick.com/xqc"
     },
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "trainwreckstv",
+        img: "/images/trainwreckstv.png",
+        link: "https://kick.com/trainwreckstv"
     },
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "roshtein",
+        img: "/images/roshtein.png",
+        link: "https://kick.com/roshtein"
     },
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "iceposeidon",
+        img: "/images/iceposeidon.png",
+        link: "https://kick.com/iceposeidon"
     },
     {
-        name: "Jane Cooper",
-        img: "/images/male.png"
+        name: "egorkreed",
+        img: "/images/egorkreed.png",
+        link: "https://kick.com/egorkreed"
     },
 ]
 
@@ -211,13 +217,14 @@ function HomePage() {
                     <div className={"grid grid-cols-3 gap-y-10 gap-x-2 md:gap-2.5 md:grid-cols-6 md:grid-rows-1 w-full"}>
                         <Fade cascade={true} damping={0.1} triggerOnce={true}>
                             {
-                                partners.map((item) => (
-                                    <div className={"flex flex-col gap-2.5 items-center relative"} key={item.name}>
+                                partners.map((item, index) => (
+                                    <div className={"flex flex-col gap-2.5 items-center relative"} key={index}>
                                         <div className={"relative h-[120px] md:h-[220px] w-full"}>
-                                            <div className={"absolute bottom-0 partner-card h-[120px] md:h-[220px] w-full"}></div>
-                                            <img className={"absolute -bottom-[15px] scale-90"} src={item.img}/>
+                                            <div
+                                                className={"absolute bottom-0 partner-card h-[120px] md:h-[220px] w-full"}></div>
+                                                <img className={"absolute -bottom-0"} src={item.img}/>
                                         </div>
-                                        <span>{item.name}</span>
+                                        <a href={item.link} className={"z-10"}>{item.name}</a>
                                     </div>
                                 ))
                             }
@@ -226,8 +233,8 @@ function HomePage() {
               </section>
               <section id={"services"}>
                   <div
-                      className={"grid grid-cols-1 grid-rows-6 md:grid-cols-12 md:grid-rows-2 md:gap-x-5 md:gap-y-5 w-full md:h-[592px]"}>
-                      <div className="relative row-span-1 md:col-span-5 dashed min-h-[240px] ">
+                      className={"grid grid-cols-1 gap-y-5 grid-rows-6 md:gap-y-0 md:grid-cols-12 md:grid-rows-2 md:gap-x-5 w-full md:h-[592px]"}>
+                      <div className="relative row-span-1 md:col-span-5 dashed min-h-[240px] md:mb-5">
                           <div className={"relative w-full h-full overflow-hidden"}>
                               <div className={"flex flex-col gap-3.5 p-5 w-2/3"}>
                                   <h3>Advertising
@@ -248,7 +255,7 @@ function HomePage() {
                           <img className={"absolute -right-1 -bottom-1"} src={"/icons/corner.svg"}/>
                       </div>
                       <div
-                          className="relative row-span-1 md:col-span-3 md:col-start-6 md:row-start-1 dashed">
+                          className="relative row-span-1 md:col-span-3 md:col-start-6 md:row-start-1 md:mb-5 dashed">
                           <div className={"relative w-full h-full overflow-hidden"}>
                               <div className={"flex flex-col gap-3.5 p-5"}>
                                   <h3>Content Marketing</h3>
@@ -304,7 +311,7 @@ function HomePage() {
                       </div>
                   </div>
               </section>
-                <section id={"contact"}>
+                <section id={"contact"} className={"flex-col gap-10 md:flex-row md:justify-between md:items-center"}>
                     <div className={"flex flex-col items-center gap-12 text-left"}>
                         <Fade triggerOnce={true}>
                             <h2 className={"text-left scale-75 md:scale-100"}>Contacts</h2>
@@ -312,7 +319,7 @@ function HomePage() {
                         <div className={"flex flex-col items-center md:flex-row gap-6"}>
                             {
                                 contacts.map((item) => (
-                                    <div className={"flex gap-2.5"}>
+                                    <div className={"flex gap-2.5"} key={item.name}>
                                         <img src={item.icon}/>
                                         <a href={item.link}>{item.name}</a>
                                     </div>
@@ -321,8 +328,13 @@ function HomePage() {
                         </div>
                         <p>Свяжись с нами, или оставь заявку</p>
                     </div>
-                    <div>
-
+                    <div className={"md:w-1/3"}>
+                        <div className={"flex flex-col gap-5 w-full items-end"}>
+                            <input placeholder={"Full name"} className={"form-input w-full"}/>
+                            <input placeholder={"E-mail"} className={"form-input w-full"}/>
+                            <input placeholder={"Phone number"} className={"form-input w-full"}/>
+                            <button className={"form-button mt-5"}>Send a request</button>
+                        </div>
                     </div>
                 </section>
             </main>

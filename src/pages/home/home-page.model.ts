@@ -5,7 +5,8 @@ export type Navigation = {
 
 export type Partners = {
     name: string,
-    img: string
+    img: string,
+    link: string
 }[]
 
 export type Contacts = {

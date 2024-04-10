@@ -180,6 +180,19 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .form-input {
+    @apply px-7 py-4;
+    background-color: transparent;
+    border-bottom: 2px solid #B6B6B6;
+    outline: none;
+  }
+
+  .form-button {
+    background-image: linear-gradient(to bottom, #FCF6D1, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .dashed {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23505050FF' stroke-width='4' stroke-dasharray='14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");  }
 }
