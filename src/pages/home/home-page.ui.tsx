@@ -62,11 +62,6 @@ const contacts: Contacts = [
         link: "",
     },
     {
-        icon: "/icons/skype.svg",
-        name: "Skype",
-        link: "",
-    },
-    {
         icon: "/icons/telegram.svg",
         name: "mwoodo1",
         link: "",
