@@ -30,7 +30,7 @@ const navigation: Navigation = [
 
 const partners: Partners = [
     {
-        name: "mellstry",
+        name: "mellstroy",
         img: "/images/mellstroy.png",
         link: "https://kick.com/melstroy"
     },
