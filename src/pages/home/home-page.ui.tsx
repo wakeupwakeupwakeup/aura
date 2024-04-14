@@ -1,7 +1,13 @@
 import {Contacts, Navigation, Partners} from "./home-page.model.ts"
 import { Slide, Fade } from "react-awesome-reveal"
 import {useParallax} from "react-scroll-parallax";
-import {useState} from "react";
+import {useCallback, useState} from "react";
+import {Field, Form, Formik} from "formik";
+import {string} from "zod";
+import {formikContract} from "~shared/lib/zod";
+import {UserFormDtoSchema} from "~entities";
+import axios from "axios";
+
 
 const navigation: Navigation = [
     {
@@ -58,13 +64,13 @@ const partners: Partners = [
 const contacts: Contacts = [
     {
         icon: "/icons/mail.svg",
-        name: "example@gmail.com",
+        name: "business@aur.agency",
         link: "",
     },
     {
         icon: "/icons/telegram.svg",
-        name: "mwoodo1",
-        link: "",
+        name: "@auragencymanager",
+        link: "https://t.me/auragencymanager",
     },
 ]
 
@@ -100,11 +106,30 @@ function DollarBottomRight() {
 
 function HomePage() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
+    const onFieldInput = useCallback((e) => {
+        e.target.value = e.target.value.replace(/\D/g, "");
+    }, []);
+
+    const handleSubmit = async (data: object) => {
+        const csvUrl = "https://sheet.best/api/sheets/8ffb6c25-edcd-4215-969f-c79572a2f0c5"
+
+        try {
+            const response = await axios.post(csvUrl, data)
+            console.log(data)
+            console.log(response.data);
+            // Успешно отправлено
+        } catch (error) {
+            console.log(data)
+            console.error('Ошибка при отправке данных в Google Таблицу:', error);
+        }
+    };
+
     return (
         <>
             <header id={"header"} className={"flex justify-between"}>
                 <div className={"flex gap-24 items-center"}>
-                <span className={"uppercase logo text-5xl"}>Aura</span>
+                <span className={"uppercase logo text-5xl"}>Aur</span>
                 <nav className={"hidden md:flex gap-8"}>
                     {navigation.map((item) => (
                         <a href={item.link} key={item.title}>{item.title}</a>
@@ -115,8 +140,8 @@ function HomePage() {
                     <img src={"/icons/menu.svg"} />
                 </div>
                 <div className={"hidden md:flex gap-6 items-center"}>
-                    <a>Feedback</a>
-                    <a>Консультация</a>
+                    <a href={"#contact"}>Feedback</a>
+                    <a href={"#contact"}>Consultation</a>
                 </div>
                 <div className={menuOpen? "" : "hidden"}>
                     <Slide cascade={false} className={menuOpen? "flex justify-between absolute left-0 top-0 h-screen w-screen bg-black z-30" : "hidden"}>
@@ -141,7 +166,7 @@ function HomePage() {
                     <div className={"flex flex-col gap-20 max-w-[660px] z-10 relative"}>
                         <h1 className={"flex flex-col"}>
                             <span
-                                className={"gradient text-[10rem] leading-[10rem] md:leading-[15rem] md:text-[17rem]"}>Aura <br/> Marketing</span>
+                                className={"gradient text-[10rem] leading-[10rem] md:leading-[15rem] md:text-[17rem]"}>Aur <br/> Marketing</span>
                             <span className={"gradient"}>Agency</span>
                         </h1>
                         <Slide triggerOnce={true} direction={"up"}>
@@ -321,24 +346,58 @@ function HomePage() {
                                 ))
                             }
                         </div>
-                        <p>Свяжись с нами, или оставь заявку</p>
+                        <p>Contact us or leave a request</p>
                     </div>
                     <div className={"md:w-1/3"}>
-                        <div className={"flex flex-col gap-5 w-full items-end"}>
-                            <input placeholder={"Full name"} className={"form-input w-full"}/>
-                            <input placeholder={"E-mail"} className={"form-input w-full"}/>
-                            <input placeholder={"Phone number"} className={"form-input w-full"}/>
-                            <button className={"form-button mt-5"}>Send a request</button>
-                        </div>
+                        <Formik
+                            initialValues={initialValues}
+                            onSubmit={(values) => handleSubmit(values)}
+                            validate={() => ({})}
+                            // validate={formikContract(UserFormDtoSchema)}
+                        >
+                            <Form>
+                                <div className={"flex flex-col gap-5 w-full items-end"}>
+                                    <Field
+                                        name={"name"}
+                                        as={"input"}
+                                        type={"text"}
+                                        placeholder={"Full name"}
+                                        className={"form-input w-full"}
+                                    />
+                                    <Field
+                                        name={"email"}
+                                        as={"input"}
+                                        type={"email"}
+                                        placeholder={"E-mail"}
+                                        className={"form-input w-full"}
+                                    />
+                                    <Field
+                                        name={"phone"}
+                                        as={"input"}
+                                        type={"tel"}
+                                        placeholder={"Phone number"}
+                                        className={"form-input w-full"}
+                                        onInput={onFieldInput}
+                                    />
+                                    <button className={"form-button mt-5"} type={"submit"}>Send a request</button>
+                                </div>
+                            </Form>
+                        </Formik>
                     </div>
                 </section>
             </main>
             <footer className={"flex justify-center gap-5 mt-24"}>
-                <a>Политика конфиденциальности</a>
-                <a>Условия пользования</a>
+                <a>Privacy Policy</a>
+                <a>Terms of Use</a>
             </footer>
         </>
     )
+}
+
+const initialValues = {
+    name: string,
+    email: string,
+    phone: string
 }
 
 export default HomePage
