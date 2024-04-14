@@ -9,7 +9,7 @@ export function formikContract<D>(data: ZodType<D>) {
         if (parsed.success) {
             return errors
         }
-
+        // @ts-ignore
         parsed.error.errors.forEach((e) => {
             e.path.forEach((path) => {
                 errors[path] = e.message
